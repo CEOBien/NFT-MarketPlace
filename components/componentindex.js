@@ -13,6 +13,8 @@ import Collection from "./Collection/Collection";
 import AudioLive from "./AudioLive/AudioLive";
 import FollowerTab from "./FollwerTab/FollowerTab";
 import Slider from "./Slider/Slider";
+import Brand from "./Brand/Brand";
+import Video from "./Video/Video";
 export {
   Button,
   Footer,
@@ -29,5 +31,6 @@ export {
   AudioLive,
   FollowerTab,
   Slider,
-
+  Brand,
+  Video,
 };

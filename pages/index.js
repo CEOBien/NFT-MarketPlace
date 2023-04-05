@@ -13,6 +13,8 @@ import {
   AudioLive,
   FollowerTab,
   Slider,
+  Brand,
+  Video,
 } from "@/components/componentindex";
 
 const Home = () => {
@@ -21,18 +23,28 @@ const Home = () => {
       <HeroSection />
       <Service />
       <BigNFTSilder />
-      <Subscribe />
+      <Title
+        heading="Audio Collection"
+        paragraph="Discover the most outstanding NFTs in all topics of life."
+      />
+      <AudioLive />
+      <FollowerTab />
+      <Slider />
+      <Collection />
+      <Title
+        heading="Featured NFTs"
+        paragraph="Discover the most outstanding NFTs in all topics of life."
+      />
+      <Filter />
+      <NFTCard />
       <Title
         heading="Browse by category"
         paragraph="Explore the NFTs in the most featured categories."
       />
-      <Category/>
-      <Filter/>
-      <NFTCard/>
-      <Collection/>
-      <AudioLive/>
-      <FollowerTab/> 
-      <Slider/>
+      <Category />
+      <Subscribe />
+      <Brand/>
+      <Video/>
     </div>
   );
 };
