@@ -3,7 +3,7 @@ import Style from "../styles/collection.module.css";
 import images from "../img";
 import {
   Banner,
-  collectionProfile,
+  CollectionProfile,
   NFTCardTwo,
 } from "@/collectionPage/collectionIndex";
 import { Slider, Brand } from "@/components/componentindex";
@@ -22,7 +22,7 @@ const collection = () => {
   return (
     <div className={Style.collection}>
       <Banner bannerImage={images.creatorbackground1} />
-      <collectionProfile />
+      <CollectionProfile />
       <Filter />
       <NFTCardTwo NFTData={collectionArray} />
 
