@@ -6,8 +6,8 @@ import {
   CollectionProfile,
   NFTCardTwo,
 } from "@/collectionPage/collectionIndex";
-import { Slider, Brand } from "@/components/componentindex";
-import { Filter } from "@/components/componentindex";
+import { Slider, Brand } from "../components/componentindex";
+import { Filter } from "../components/componentindex";
 const collection = () => {
   const collectionArray = [
     images.nft_image_1,
