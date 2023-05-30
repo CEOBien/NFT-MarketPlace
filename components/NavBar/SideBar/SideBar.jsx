@@ -1,4 +1,4 @@
-import {React,useState} from 'react';
+import { React, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { GrClose } from "react-icons/gr";
@@ -11,10 +11,10 @@ import {
   TiArrowSortedDown,
   TiArrowSortedUp,
 } from "react-icons/ti";
-import Style from './SideBar.module.css';
+import Style from "./SideBar.module.css";
 import images from "../../../img";
 import Button from "../../Button/Button";
-const SideBar = ({ setopenSideMenu }) => {
+const SideBar = ({ setopenSideMenu, currentAccount, connectWallet }) => {
   //------USESTATE
   const [openDiscover, setOpenDiscover] = useState(false);
   const [openHelp, setOpenHelp] = useState(false);
@@ -169,11 +169,18 @@ const SideBar = ({ setopenSideMenu }) => {
       </div>
 
       <div className={Style.sideBar_button}>
-        <Button btnName="Create" handleClick={() => {}} />
+        {currentAccount == "" ? (
+          <Button btnName="Connect" handleClick={() => connectWallet()} />
+        ) : (
+          <Link href="/uploadNFT">
+            <Button btnName="Create" handleClick={() => {}} />
+          </Link>
+        )}
+
         <Button btnName="Connect Wallet" handleClick={() => {}} />
       </div>
     </div>
   );
 };
 
-export default SideBar
+export default SideBar;

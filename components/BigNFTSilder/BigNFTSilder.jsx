@@ -16,7 +16,7 @@ const BigNFTSilder = () => {
     {
       title: "Hello NFT",
       id: 1,
-      name: "Daulat Hussain",
+      name: "Dao Hai",
       collection: "GYm",
       price: "00664 ETH",
       like: 243,
@@ -32,7 +32,7 @@ const BigNFTSilder = () => {
     {
       title: "Buddy NFT",
       id: 2,
-      name: "Shoaib Hussain",
+      name: "Thao VY",
       collection: "Home",
       price: "0000004 ETH",
       like: 243,
@@ -48,7 +48,7 @@ const BigNFTSilder = () => {
     {
       title: "Gym NFT",
       id: 3,
-      name: "Raayan Hussain",
+      name: "Thanh Nam",
       collection: "GYm",
       price: "0000064 ETH",
       like: 243,
@@ -64,7 +64,7 @@ const BigNFTSilder = () => {
     {
       title: "Home NFT",
       id: 4,
-      name: "Raayan Hussain",
+      name: "Khue",
       collection: "GYm",
       price: "4664 ETH",
       like: 243,
