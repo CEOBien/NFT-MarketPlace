@@ -3,12 +3,12 @@ import Style from "./NFTDEtailsPage.module.css";
 
 import { NFTTabs, NFTDescription, NFTDetailsImg } from "./index";
 
-const NFTDetailsPage = () => {
+const NFTDetailsPage = ({nft}) => {
   return (
     <div className={Style.NFTDetailsPage}>
       <div className={Style.NFTDetailsPage_box}>
-        <NFTDetailsImg />
-        <NFTDescription />
+        <NFTDetailsImg nft={nft}/>
+        <NFTDescription nft={nft}/>
       </div>
     </div>
   );

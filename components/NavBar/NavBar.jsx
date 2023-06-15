@@ -5,11 +5,12 @@ import Link from "next/link";
 import { MdNotifications } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
 import { CgMenuLeft, CgMenuRight } from "react-icons/cg";
+import { useRouter } from "next/router";
 
 //import index
 
 import { Discover, HelpCenter, Notification, Profile, SideBar } from "./index";
-import { Button } from "../componentindex";
+import { Button, Errors } from "../componentindex";
 import Style from "./NavBar.module.css";
 import images from "../../img";
 
@@ -23,6 +24,8 @@ const NavBar = () => {
   const [notification, setnotification] = useState(false);
   const [profile, setprofile] = useState(false);
   const [openSideMenu, setopenSideMenu] = useState(false);
+
+  const router = useRouter();
 
   const openMenu = (e) => {
     const btnText = e.target.innerText;
@@ -74,7 +77,9 @@ const NavBar = () => {
     }
   };
   //smart contract
-  const { currentAccount, connectWallet } = useContext(NFTMarketplaceContext);
+  const { currentAccount, connectWallet, errorOpen } = useContext(
+    NFTMarketplaceContext
+  );
   return (
     <div className={Style.navbar}>
       <div className={Style.navbar_container}>
@@ -140,9 +145,10 @@ const NavBar = () => {
             {currentAccount == "" ? (
               <Button btnName="Connect" handleClick={() => connectWallet()} />
             ) : (
-              <Link href="/uploadNFT">
-                <Button btnName="Create" handleClick={() => {}} />
-              </Link>
+              <Button
+                btnName="Create"
+                handleClick={() => router.push("/uploadNFT")}
+              />
             )}
           </div>
           {/*USER PROFILE */}
@@ -156,7 +162,7 @@ const NavBar = () => {
                 onClick={() => openProfile()}
                 className={Style.navbar_container_right_profile}
               />
-              {profile && <Profile />}
+              {profile && <Profile currentAccount={currentAccount} />}
             </div>
           </div>
           {/*MENU BUTTON */}
@@ -178,6 +184,7 @@ const NavBar = () => {
           />
         </div>
       )}
+      {errorOpen && <Errors />}
     </div>
   );
 };

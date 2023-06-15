@@ -52,7 +52,11 @@ import dog1 from "./dog1.png";
 import dog2 from "./dog2.jpg";
 import cat1 from "./cat1.png";
 import cat2 from "./cat2.png";
+import giphy from "./giphy.gif";
+import error from "./error.png";
 export default {
+  error,
+  giphy,
   dog1,
   dog2,
   cat1,
